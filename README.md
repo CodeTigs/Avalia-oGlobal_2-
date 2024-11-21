@@ -1,0 +1,1 @@
+# Avalia-oGlobal_2-
