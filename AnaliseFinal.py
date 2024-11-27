@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from imblearn.over_sampling import SMOTE
 
 # Load the CSV file into a pandas DataFrame
-file_path = 'D:\AG2\AG2/Wholesale customers data.csv'
+file_path = 'D:\AG2\AG2\Avalia-oGlobal_2-/Wholesale customers data.csv'
 data = pd.read_csv(file_path)
 
 # Mapping the values based on the provided image
@@ -16,12 +16,13 @@ region_mapping = Newregion_mapping = {"Lisbon": 0, "Oporto": 1, "Other": 2}
 data['Channel'] = data['Channel'].replace(Newchannel_mapping)
 data['Region'] = data['Region'].replace(Newregion_mapping)
 
-# Save the updated DataFrame to a new CSV file with updated values
-output_file_path = 'D:\AG2\AG2/Wholesale_customers_data_updated.csv'
-data.to_csv(output_file_path, index=False)
 
 # Reorder the columns
 data = data[['Region', 'Fresh', 'Milk', 'Grocery', 'Frozen', 'Detergents_Paper', 'Delicatessen', 'Channel']]
+
+# Save the updated DataFrame to a new CSV file with updated values
+output_file_path = 'D:\AG2\AG2/Wholesale_customers_data_updated.csv'
+data.to_csv(output_file_path, index=False)
 
 # Split the data into training and testing sets (80% training, 20% testing)
 train_data, test_data = train_test_split(data, test_size=0.2, random_state=42, stratify=data['Channel'])

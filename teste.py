@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Carregar o arquivo CSV em um DataFrame
-file_path = 'D:\\AG2\\AG2\\Wholesale customers data.csv'
+file_path = 'D:\AG2\AG2/Wholesale_customers_data_updated.csv'
 data = pd.read_csv(file_path)
 
 # Contar quantos valores existem em cada classe na coluna 'Channel'

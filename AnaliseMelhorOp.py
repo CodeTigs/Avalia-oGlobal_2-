@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, classification_report
 
 # Load the CSV file into a pandas DataFrame
-file_path = 'D:\AG2\AG2/Wholesale customers data.csv'
+file_path = 'D:\AG2\AG2\Avalia-oGlobal_2-/Wholesale customers data.csv'
 data = pd.read_csv(file_path)
 
 # Mapping the values based on the provided image
